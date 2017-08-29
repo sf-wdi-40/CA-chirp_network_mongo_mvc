@@ -9,7 +9,7 @@ module.exports = (req, res) => {
         chirp: req.body.chirp
     });
 
-    myChirp.save(function(err) {
+    myChirp.save((err) => {
         res.redirect("/chirps");
     });
 }
