@@ -5,6 +5,11 @@ app.set("view engine", "ejs");
 
 app.use(express.static("./assets"));
 
+//Configure body parser
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
 //Routes in app middleware
 app.use(require("./resources"));
 
